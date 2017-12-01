@@ -1,0 +1,323 @@
+
+/* * ---------------------------------------------------------------------
+#  *  Author        : Julio Carranza
+#  *  Name          : ztpinstall.slax
+#  *  Version       : 1.00, 2016-10-03
+#  *
+#  *
+#  *  Last Modified : 2016-10-03
+#  *  Script Type   : op/event
+#  *  Description   : script performs Zero Touch Provisoning using junos  
+#  *                  auto-installatation allowing to specify any IP
+#  *                  port combination for downloading device image file
+#  *                  and configuration file. This script is based on
+#  *                  jctyztp script by Jeremy Schulman and ztp_init 
+#  *                  script by Brian Sherwood. The reason for a new
+#  *                  script is to support the downloading of the 
+#  *                  configuration file using https and specify port.
+#  *                  that is disabled using load-configuration 
+#  *                  template with URL.
+#  *                  It does this downloading the configuration file and
+#  *                  copying it to the /var/tmp directory, then 
+#  *                  committing it. Script is compatible with ZTP
+#  *                  devices enforcing terminate function for both 
+#  *                  failed and success upgrade. The reason because  the 
+#  *                  upgrade is interrupted by ZTP failing the first
+#  *                  upgrade attempt. Change of the script name it is 
+#  *                  to avoid any confusion with previous ones.
+#  *------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------ */
+/* XML namespaces */
+/* ------------------------------------------------------------------ */
+/* Juniper */
+version 1.1;
+ns junos = "http://xml.juniper.net/junos/*/junos";
+ns xnm = "http://xml.juniper.net/xnm/1.1/xnm";
+ns jcs = "http://xml.juniper.net/junos/commit-scripts/1.0";
+
+ns exsl extension = "http://exslt.org/common";
+
+/* EXSLT */
+ns str extension = "http://exslt.org/strings";
+
+/* private namespace for this script */
+ns ztp_script = "http://xml.juniper.com/ztp_script/1.0";
+
+import '../import/junos.xsl';
+
+
+/* ------------------------------------------------------------------ */
+/* Constants */
+/* ------------------------------------------------------------------ */
+
+var $APPNAME = 'ztp_script[' _ $junos-context/pid _ ']';
+var $SYSLOG = 'user.info';
+var $TMPDIR = '/var/tmp';
+var $CODEDIR = '/var/tmp';
+
+var $ZTP_GROUP_NAME = "ztp_script";
+var $ZTP_CODE_MACRO_NAME = "code";
+var $ZTP_CONFIG_MACRO_NAME = "config";
+var $ZTP_LOCKFILE = '/tmp/ztp_script.lock';
+
+/* ------------------------------------------------------------------ */
+/* Global variables */
+/* ------------------------------------------------------------------ */
+
+var $jnx = jcs:open();
+
+/* ------------------------------------------------------------------ */
+/* MAIN */
+/* ------------------------------------------------------------------ */
+
+match / {
+
+  if( not( $jnx )) {
+    expr jcs:syslog( $SYSLOG, $APPNAME _ ": ERROR: unable to connect to Junos API");
+    expr jcs:progress( "ERROR: unable to connect to Junos API");
+    expr jcs:output( $APPNAME _ ":ERROR: unable to connect to Junos API");
+    terminate;
+  }
+  
+  var $running = ztp_script:only_once();
+  if( $running ) {
+    expr jcs:syslog( $SYSLOG, $APPNAME _ ": process already running, backing off" );
+    expr jcs:progress( "process already running, backing off" );
+    expr jcs:output( $APPNAME _ ": process already running, backing off" );
+    terminate;
+  }
+  
+  expr jcs:syslog( $SYSLOG, $APPNAME _ ": SCRIPT-BEGIN" );
+  expr jcs:progress( "SCRIPT-BEGIN" );
+
+
+  /* upgrade code */
+   var $code_upgrade = ztp_script:upgrade_code();
+
+
+  /* upgrade config */
+  var $config_upgrade = ztp_script:upgrade_config();
+
+
+  var $die = ztp_script:terminate();
+
+
+}
+
+/* ------------------------------------------------------------------ */
+/* Upgrade code                                                       */
+/* ------------------------------------------------------------------ */
+
+function ztp_script:upgrade_code() {
+
+  /* get the apply-macro */
+  var $get = <get-configuration> { 
+                <configuration> {
+                   <version>;
+                   <groups> { 
+                      <name> $ZTP_GROUP_NAME;
+                      <apply-macro> { 
+                         <name> $ZTP_CODE_MACRO_NAME;
+                      }
+                   }
+                }
+             }
+
+  var $got = jcs:execute( $jnx, $get );
+
+  var $running_version = $got/version;
+  var $production_version = $got/groups[name=$ZTP_GROUP_NAME]/apply-macro[name=$ZTP_CODE_MACRO_NAME]/data[name='version']/value;
+
+  expr jcs:syslog( $SYSLOG, $APPNAME _ ": running_version = " _ $running_version);
+  expr jcs:progress( "running_version = " _ $running_version);
+
+  expr jcs:syslog( $SYSLOG, $APPNAME _ ": production_version = " _ $production_version);
+  expr jcs:progress( "production_version = " _ $production_version);
+
+  if ($running_version == $production_version) {
+     expr jcs:progress( "Code is up to date, no upgrade required");
+     expr jcs:syslog( $SYSLOG, $APPNAME _ ": Code is up to date, no upgrade required");
+     result false();
+  } else {
+     expr jcs:progress( "upgrade required");
+     expr jcs:trace("upgrade required");
+     for-each ($got/groups[name=$ZTP_GROUP_NAME]/apply-macro[name=$ZTP_CODE_MACRO_NAME]/data[not(value)]/name) {
+         expr jcs:progress( "Processing " _ ../name );
+
+         /* request system software add ... */
+         expr jcs:syslog( $SYSLOG, $APPNAME _ ": installing image" );
+         var $do_install := <request-package-add> {
+           <no-validate>;
+           <force>;
+           <reboot>;
+           <package-name> ../name ;
+         }
+         var $install_results = jcs:execute( $jnx, $do_install );
+		 for-each( $install_results/../output ) {
+            expr jcs:syslog( $SYSLOG, $APPNAME _ ": Install Error: ",  output );
+            expr jcs:progress( "Install error: "  _ output );	
+         }
+         if ($install_results/../package-result == 0) {
+            /* successfully installed package -- terminate script and wait for reboot */
+            expr jcs:syslog( $SYSLOG, $APPNAME _ ": software installed" );
+            expr jcs:progress( "software installed" );    
+         }
+         var $die = ztp_script:terminate();
+     } /* foreach software image */
+
+  } /* else */
+
+} /* end function */
+
+
+
+/* ------------------------------------------------------------------ */
+/* Upgrade config                                                       */
+/* ------------------------------------------------------------------ */
+
+function ztp_script:upgrade_config() {
+
+   expr jcs:progress( "Upgrading config" ); 
+   expr jcs:syslog( $SYSLOG, $APPNAME _ ": Upgrading config" );
+
+   /* get our serial number */
+   var $chassis_hardware := jcs:execute( $jnx, 'get-chassis-inventory' );
+   var $serial_no = $chassis_hardware/chassis/serial-number;
+   expr jcs:progress( "serial no = " _ $serial_no );
+   expr jcs:syslog( $SYSLOG, $APPNAME _ ": serial no = " _ $serial_no );
+
+
+  /* get the apply-macro */
+  var $get = <get-configuration> { 
+                <configuration> {
+                   <groups> { 
+                      <name> $ZTP_GROUP_NAME;
+                      <apply-macro> { 
+                         <name> $ZTP_CONFIG_MACRO_NAME;
+                      }
+                   }
+                }
+             }
+
+  var $got := jcs:execute( $jnx, $get );
+
+
+  /* 
+  *  <exsl:document href="/tmp/foobar.xml"> {
+  *     copy-of $got;
+  *  }
+  */
+
+  /* lock the config */
+  var $lock = <lock-configuration>;
+  var $did_lock = jcs:execute( $jnx, $lock );
+  if ( $did_lock//self::xnm:error ) {
+     expr jcs:syslog( $SYSLOG, $APPNAME _ ": ERROR: unable to lock config" ); 
+     expr jcs:progress( "ERROR: unable to lock config" ); 
+     var $die = ztp_script:terminate();
+  } else {
+     expr jcs:progress( "Got config lock" ); 
+  }
+
+
+  for-each ($got/groups[name=$ZTP_GROUP_NAME]/apply-macro[name=$ZTP_CONFIG_MACRO_NAME]/data[not(value)]/name) {
+      var $config_url = ../name _ $serial_no _ ".conf"; 
+      /* Copy configuration file to /var/tmp directory */
+      expr jcs:progress( "Processing config url " _ $config_url );
+      expr jcs:syslog( $SYSLOG, $APPNAME _ ": Processing config url " _ $config_url );
+
+       var $file-copy-rpc = {
+          <file-copy> {
+              <source> $config_url;
+              <destination> $TMPDIR _ $serial_no _ ".conf";
+          }
+      }
+      var $copy-results = jcs:invoke( $file-copy-rpc );
+
+
+      /* load in new config */
+      var $do_load = <load-configuration action="override" url=$TMPDIR _ $serial_no _ ".conf" format="text">;
+      var $did_load = jcs:execute( $jnx, $do_load );
+
+
+      if( not( $did_load/load-success )) {
+         expr jcs:syslog( $SYSLOG, $APPNAME _ ": ERROR: unable to load config " _ $config_url );
+         expr jcs:progress( "ERROR: unable to load config " _ $config_url );
+      } else {
+         expr jcs:progress( "CONFIG LOAD SUCCESS" );
+
+         var $commit = <commit-configuration> {
+                          <full>;
+                          <synchronize>;
+                          <force-synchronize>;
+                          <log> "Initial config load";
+                       }
+         var $did_commit = jcs:execute( $jnx, $commit );
+         if ( $did_commit//self::xnm:error ) {
+            expr jcs:progress( "COMMIT FAILED" );
+            expr jcs:syslog( $SYSLOG, $APPNAME _ ": COMMIT FAILED" );
+         } else {
+            expr jcs:progress( "COMMIT SUCCESS" );
+            /* 
+             *   reboot here 
+             *   var $reboot := jcs:execute( $jnx, 'request-reboot' );
+    	     */
+            var $unlock := jcs:execute( $jnx, 'unlock-config' );
+            var $die = ztp_script:terminate();
+         }
+      }
+  } /* end of foreach config_url */
+
+  /* if we make it here, we failed to load the config */
+  var $unlock = <unlock-configuration>;
+  var $did_unlock = jcs:execute( $jnx, $unlock );
+  expr jcs:progress( "release config lock" ); 
+
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* Helper routines
+/* ------------------------------------------------------------------ */
+
+function ztp_script:file-exists( $filename ) {
+  var $ls_file = <file-list> { <path> $filename; }
+  var $ls_got = jcs:execute( $jnx, $ls_file );
+  var $retval = boolean( $ls_got//file-information );
+  
+  result $retval;
+}
+
+function ztp_script:file-delete( $filename ) {
+  var $do_rm = <file-delete> { <path> $filename; }
+  var $did_rm = jcs:execute( $jnx, $do_rm );
+  /* @@@ trap error */
+  
+  result true();
+}
+
+function ztp_script:only_once() {
+  if( ztp_script:file-exists( $ZTP_LOCKFILE )) {
+    result true();
+  }
+  else {
+    var $do_lock = <file-put> {
+      <filename> $ZTP_LOCKFILE;
+      <encoding> 'ascii';
+      <file-contents> 'locked';
+    }
+    var $did_lock = jcs:execute( $jnx, $do_lock );
+    result false();
+  }
+}
+
+function ztp_script:terminate() {
+  expr jcs:syslog( $SYSLOG, $APPNAME _ ": SCRIPT-TERMINATE" );
+  var $rm_lock = ztp_script:file-delete( $ZTP_LOCKFILE );
+  terminate;
+}
+
+

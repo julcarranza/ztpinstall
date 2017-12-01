@@ -1,0 +1,1436 @@
+﻿Mounted jkernel package on /dev/md2...
+Verified manifest signed by PackageProductionEc_2015
+Verified jkernel-qfx-3-14.1X53-D25.2 signed by PackageProductionEc_2015
+Mounted jpfe package on /dev/md4...
+Verified manifest signed by PackageProductionEc_2015
+Verified jpfe-qfx-3-14.1X53-D25.2 signed by PackageProductionEc_2015
+Mounted jdocs package on /dev/md6...
+Verified manifest signed by PackageProductionEc_2015
+Verified jdocs-qfx-14.1X53-D25.2 signed by PackageProductionEc_2015
+Mounted jroute package on /dev/md8...
+Verified manifest signed by PackageProductionEc_2015
+Verified jroute-qfx-3-14.1X53-D25.2 signed by PackageProductionEc_2015
+Executing /packages/mnt/jroute-qfx-3-14.1X53-D25.2/mount.post..
+Mounted jcrypto package on /dev/md10...
+Verified manifest signed by PackageProductionEc_2015
+Verified jcrypto-qfx-14.1X53-D25.2 signed by PackageProductionEc_2015
+Mounted jswitch package on /dev/md12...
+Verified manifest signed by PackageProductionEc_2015
+Verified jswitch-qfx-3-14.1X53-D25.2 signed by PackageProductionEc_2015
+Mounted py-base-xlr package on /dev/md14...
+Verified manifest signed by PackageProductionEc_2015
+Verified py-base-xlr-14.1X53-D25.2 signed by PackageProductionEc_2015
+swapon: adding /dev/da0s3b as swap device
+sysctl: unknown oid 'dev.ad.1'
+Checking sanity of /var/tmp [ /dev/da0s3d ] ... done (full)
+Disabling soft update on /var/tmp [ /dev/da0s3d ] ... done
+Checking sanity of /var [ /dev/da0s1f ] ... done (full)
+Disabling soft update on /var [ /dev/da0s1f ] ... done
+Checking sanity of /config [ /dev/da0s3e ] ... done (full)
+Disabling soft update on /config [ /dev/da0s3e ] ... done
+Checking sanity of /var/shared [ /dev/da0s3f ] ... done (full)
+Disabling soft update on /var/shared [ /dev/da0s3f ] ... done
+Checking sanity of /var/rundb [ /dev/da0s3g ] ... done (full)
+Disabling soft update on /var/rundb [ /dev/da0s3g ] ... done
+Checking sanity of / [ /dev/da0s1a ] ... done (full)
+Disabling soft update on / [ /dev/da0s1a ] ... done
+Automatic reboot in progress...
+df: /var/rundb: No such file or directory
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 128947 free (27 frags, 16115 blocks, 0.0% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 125114 free (130 frags, 15623 blocks, 0.1% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 515345 free (49 frags, 64412 blocks, 0.0% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 1248974 free (54 frags, 156115 blocks, 0.0% fragmentation)
+rm: /var/etc/pam.conf: Operation not permitted
+dump automerge buckets no 0:
+dump automerge buckets no 0:
+Creating initial configuration...mgd: error: Cannot open configuration file: /config/juniper.conf
+mgd: warning: activating factory configuration
+i2c_dev_access-xlr_i2c_bus_reset: I2C device closed. No more i2c transaction allowed.
+Generating RSA key /etc/ssh/ssh_host_key
+Generating public/private rsa1 key pair.
+Your identification has been saved in /config/ssh_host_key.
+Your public key has been saved in /config/ssh_host_key.pub.
+The key fingerprint is:
+bd:a2:46:d0:c7:be:5a:98:ed:47:f1:d6:7e:82:56:2c root@
+The key's randomart image is:
++--[RSA1 2048]----+
+|                 |
+|                 |
+|     . .         |
+|    . . o..      |
+|     . oS .o o   |
+|      .+. ..E +  |
+|     .o +o.. =   |
+|      .+... o o .|
+|     .o... .   o |
++-----------------+
+Generating DSA key /etc/ssh/ssh_host_dsa_key
+Generating public/private dsa key pair.
+Your identification has been saved in /config/ssh_host_dsa_key.
+Your public key has been saved in /config/ssh_host_dsa_key.pub.
+The key fingerprint is:
+bd:bc:41:fb:6c:2b:be:e7:07:ff:16:41:32:0c:9c:5f root@
+The key's randomart image is:
++--[ DSA 1024]----+
+|          ..+    |
+|           o + E |
+|            . =  |
+|         .   . . |
+|        S o     .|
+|         o o.  . |
+|          =  o  .|
+|          .=o o .|
+|         .+*=o o.|
++-----------------+
+Generating RSA2 key /etc/ssh/ssh_host_rsa_key
+Generating public/private rsa key pair.
+Your identification has been saved in /config/ssh_host_rsa_key.
+Your public key has been saved in /config/ssh_host_rsa_key.pub.
+The key fingerprint is:
+9c:17:e4:be:40:e4:67:6e:60:7b:f0:24:52:7d:b0:38 root@
+The key's randomart image is:
++--[ RSA 2048]----+
+|        o.o.     |
+|       + +...    |
+|      . E B.     |
+|       = # .     |
+|        S B      |
+|         = .     |
+|          .      |
+|                 |
+|                 |
++-----------------+
+Generating ECDSA key /etc/ssh/ssh_host_ecdsa_key
+Generating public/private ecdsa key pair.
+Your identification has been saved in /config/ssh_host_ecdsa_key.
+Your public key has been saved in /config/ssh_host_ecdsa_key.pub.
+The key fingerprint is:
+c3:e3:9d:10:78:48:31:4d:e7:de:f9:74:59:fc:73:0d root@
+The key's randomart image is:
++--[ECDSA  256]---+
+|      ++. .      |
+|     . +.o     . |
+|      o o .   E o|
+|       o o . . .=|
+|        S . o .o=|
+|       . = . o .o|
+|        . o   .  |
+|                 |
+|                 |
++-----------------+
+mgd: commit complete
+Setting initial options:  debugger_on_panic=NO debugger_on_break=NO.
+Starting optional daemons:  kdmmachdep.do_minidump: 0 -> 1
+kernel dumps on /dev/da0s3b
+Check for coredumps
+savecore: could not be determined
+savecore: could not be determined
+savecore: no dumps found
+.
+Doing initial network setup:
+.
+Initial interface configuration:
+additional daemons:.
+
+Additional routing options:kern.module_path: /boot//kernel;/boot/modules -> /boot/modules;/modules/peertype;/modules/ifpfe_drv;/modules/iplatform;/modulens;
+kld netpfe dtrv: ifpfed_etherface ifpfed_eth.1 already present in the KLD 'kernel'!
+kldload: Unsupported file type
+kldload: can't load /modules/ifpfe_drv/ifpfed_eth.ko: Exec format error
+ ifpfed_irb ifpfed_lt ifpfed_ml_cmn ifpfed_ppeer ifpfed_svcs ifpfed_vtkld platform: dc_ifpfeLoading the DC Platform NETPFE module
+ if_vcpkld peertype: peertype_fxpc peertype_hcm peertype_sfi peertype_slavere grat_arp_on_ifup=YES: net.link.ether.inet.grat_arp_on_ifup: 1 -> 1
+ ipsec kld.
+Doing additional network setup:.
+Starting final network daemons:.
+machdep.bootsuccess: 0 -> 1
+
+Boot media /dev/da0 has dual root support
+** /dev/da0s2a
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 112916 free (20 frags, 14112 blocks, 0.0% fragmentation)
+setting ldconfig path: /usr/lib /opt/lib
+starting standard daemons: cron.
+Local package initialization: kdmmachdep.do_minidump: 1 -> 1
+kernel dumps on /dev/da0s3b
+Check for coredumps
+savecore: could not be determined
+savecore: could not be determined
+savecore: no dumps found
+.
+kern.securelevel: -1 -> 1
+starting local daemons:set cores for group access
+.
+Tue Oct  4 06:01:26 UTC 2016
+
+Amnesiac (ttyd0)
+
+login: root
+
+Logging to master
+
+--- JUNOS 14.1X53-D25.2 built 2015-04-01 01:48:41 UTC
+                                                                               
+Broadcast Message from root@                                                   
+        (no tty) at 6:01 UTC...                                                
+                                                                               
+ALERT:Auto image Upgrade will start. This can terminate config         CLI sess
+ion(s). Modified configuration will be lost. To stop Auto-image, in CLI do the 
+following: 'edit; delete chassis auto-image-upgrade; commit'.                  
+                                                                               
+root@:RE:0% cli
+{master:0}
+                                                                               
+Broadcast Message from root@                                                   
+        (no tty) at 6:02 UTC...                                                
+                                                                               
+Committing autoinstall config                                                  
+                                                                               
+
+
+{master:0}
+root> monitor start op-script.log 
+
+{master:0}
+root> 
+Message from syslogd@ at Oct  4 06:02:19  ...
+ dc-pfe: SCHED: Thread 45 (cmqfx_pseudo) ran for 2288 ms without yielding
+
+Message from syslogd@ at Oct  4 06:02:19  ...
+ dc-pfe: Scheduler Oinker
+
+Message from syslogd@ at Oct  4 06:02:19  ...
+ dc-pfe: Frame 00: sp = 0x157ad960, pc = 0x00001808
+
+Message from syslogd@ at Oct  4 06:02:31  ...
+ dc-pfe: SCHED: Thread 45 (cmqfx_pseudo) ran for 2221 ms without yielding
+
+Message from syslogd@ at Oct  4 06:02:31  ...
+ dc-pfe: Scheduler Oinker
+
+Message from syslogd@ at Oct  4 06:02:31  ...
+ dc-pfe: Frame 00: sp = 0x157ad960, pc = 0x0b4b0000
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 SCHED: Thread 45 (cmqfx_pseudo) ran for 2288 ms without yielding 
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 Scheduler Oinker 
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 Frame 00: sp = 0x157ad960, pc = 0x00001808 
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 SCHED: Thread 45 (cmqfx_pseudo) ran for 2221 ms without yielding 
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 Scheduler Oinker 
+
+Message from syslogd@ at Oct  4 06:02:32  ...
+ fpc0 Frame 00: sp = 0x157ad960, pc = 0x0b4b0000 
+                                                                               
+Auto Image Upgrade: DHCP Options for client interface vme.0 ConfigFile:        
+/qfx3500/bootqfx3500.conf DHCP Server: 42.42.42.30 File Server: 42.42.42.30   
+ Options state:                                                               
+Partial Options::Config File and File Server Set, Image File Not Set                                                                               
+                                                                               
+Auto Image Upgrade: DHCP Client Bound interfaces: vme.0                                                                                
+                                                                               
+Auto Image Upgrade: DHCP Client Unbound interfaces: irb.0                                                                                
+                                                                               
+Auto Image Upgrade: To stop, on CLI apply                                      
+"delete chassis auto-image-upgrade"  and commit                                                                               
+                                                                               
+Auto Image Upgrade: Active on client interface: vme.0                                                                               
+                                                                               
+Auto Image Upgrade: Interface::   "vme"                                        
+
+Auto Image Upgrade: Server::      "42.42.42.30"                                
+
+Auto Image Upgrade: Image File::  "NOT SPECIFIED"                              
+
+Auto Image Upgrade: Server File:: "bootqfx3500.conf"                           
+
+Auto Image Upgrade: Protocol::    "http"                                       
+                                                                               
+                                                                               
+Auto Image Upgrade: Start fetching bootqfx3500.conf file from server 42.42.42.3
+0 through vme using http                                                       
+                                                                               
+                                                                               
+Auto Image Upgrade: File bootqfx3500.conf fetched from server 42.42.42.30 throu
+gh vme                                                                         
+                                                                               
+                                                                               
+Auto Image Upgrade: Applying bootqfx3500.conf file configuration fetched from s
+erver 42.42.42.30 through vme                                                  
+                                                                               
+
+*** 'op-script.log' has been created ***
+
+*** op-script.log ***
+Oct  4 06:03:05 op script processing begins
+Oct  4 06:03:05 reading op script input details
+Oct  4 06:03:06 testing op details
+Oct  4 06:03:06 running op script '/var/tmp/tmp_opHOC454/tmp-op-script.p1Y9x3/commit-config.slax'
+Oct  4 06:03:06 opening op script '/var/tmp/tmp_opHOC454/tmp-op-script.p1Y9x3/commit-config.slax'
+Oct  4 06:03:06 reading op script '/var/tmp/tmp_opHOC454/tmp-op-script.p1Y9x3/commit-config.slax'
+
+
+{master:0}
+                                                                               
+Broadcast Message from root@                                                   
+        (no tty) at 6:03 UTC...                                                
+                                                                               
+Auto image Upgrade: Stopped                                                    
+                                                                               
+                                                                               
+Auto Image Upgrade: Committed Configuration bootqfx3500.conf received from 42.4
+2.42.30 through vme                                                            
+                                                                               
+configuration | no-more Oct  4 06:03:40 op script output
+Oct  4 06:03:40 begin dump
+<?xml version="1.0"?>
+<op-script-results xmlns:junos="http://xml.juniper.net/junos/*/junos" xmlns:xnm="http://xml.juniper.net/xnm/1.1/xnm" xmlns:jcs="http://xml.juniper.net/junos/commit-scripts/1.0"/>
+Oct  4 06:03:40 end dump
+Oct  4 06:03:40 inspecting op output '/var/tmp/tmp_opHOC454/tmp-op-script.p1Y9x3/commit-config.slax'
+Oct  4 06:03:40 finished op script '/var/tmp/tmp_opHOC454/tmp-op-script.p1Y9x3/commit-config.slax'
+Oct  4 06:03:40 op script processing ends
+Oct  4 06:03:40 op script processing begins
+Oct  4 06:03:40 reading op script input details
+Oct  4 06:03:40 testing op details
+Oct  4 06:03:40 running op script '/var/tmp/tmp_ophKxWD6/...transferring.file.........6IES3V/ztpinstall.slax'
+Oct  4 06:03:40 opening op script '/var/tmp/tmp_ophKxWD6/...transferring.file.........6IES3V/ztpinstall.slax'
+Oct  4 06:03:40 reading op script '/var/tmp/tmp_ophKxWD6/...transferring.file.........6IES3V/ztpinstall.slax'
+
+## Last commit: 2016-10-04 06:03:30 UTC by root
+version 14.1X53-D25.2;
+/* QFX3500*/
+groups {
+    ztp_script {
+        apply-macro code {
+            version 15.1R4.6;
+            https://42.42.42.30:4443/qfx3500/jinstall-qfx-3-15.1R4.6-domestic-signed.tgz;
+        }
+        apply-macro config {
+            https://42.42.42.30:4443/qfx3500/;
+        }
+    }
+}
+system {
+    root-authentication {
+        encrypted-password "$1$sBoaTOcb$EjWmKTv8l2NZ4hqdLQdrL."; ## SECRET-DATA
+    }
+}
+interfaces {
+    vme {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-qfx3500s;
+                }
+            }
+        }
+    }
+}
+event-options {
+    generate-event {
+        ztp_script time-interval 60;
+    }
+    policy ztp_script {
+        events ztp_script;
+        then {
+            execute-commands {
+                commands {
+                    "op url https://42.42.42.30:4443/qfx3500/ztpinstall.slax";
+                }
+            }
+        }
+    }
+}
+
+{master:0}
+root> Oct  4 06:03:47 SCRIPT-BEGIN
+Oct  4 06:03:48 running_version = 14.1X53-D25.2
+Oct  4 06:03:48 production_version = 15.1R4.6
+Oct  4 06:03:48 upgrade required
+Oct  4 06:03:48: upgrade required
+Oct  4 06:03:48 Processing https://42.42.42.30:4443/qfx3500/jinstall-qfx-3-15.1R4.6-domestic-signed.tgz
+Oct  4 06:04:01 Install error: 
+Oct  4 06:04:01 op script output
+Oct  4 06:04:01 begin dump
+<?xml version="1.0"?>
+Oct  4 06:04:01 end dump
+Oct  4 06:04:01 inspecting op output '/var/tmp/tmp_ophKxWD6/...transferring.file.........6IES3V/ztpinstall.slax'
+Oct  4 06:04:01 finished op script '/var/tmp/tmp_ophKxWD6/...transferring.file.........6IES3V/ztpinstall.slax'
+Oct  4 06:04:01 op script processing ends
+Oct  4 06:04:38 op script processing begins
+Oct  4 06:04:38 reading op script input details
+Oct  4 06:04:38 testing op details
+Oct  4 06:04:38 running op script '/var/tmp/tmp_opvFf93w/...transferring.file.........NHuhrh/ztpinstall.slax'
+Oct  4 06:04:38 opening op script '/var/tmp/tmp_opvFf93w/...transferring.file.........NHuhrh/ztpinstall.slax'
+Oct  4 06:04:38 reading op script '/var/tmp/tmp_opvFf93w/...transferring.file.........NHuhrh/ztpinstall.slax'
+Oct  4 06:04:44 SCRIPT-BEGIN
+Oct  4 06:04:45 running_version = 14.1X53-D25.2
+Oct  4 06:04:45 production_version = 15.1R4.6
+Oct  4 06:04:45 upgrade required
+Oct  4 06:04:45: upgrade required
+Oct  4 06:04:45 Processing https://42.42.42.30:4443/qfx3500/jinstall-qfx-3-15.1R4.6-domestic-signed.tgz
+Oct  4 06:05:41 op script processing begins
+Oct  4 06:05:41 reading op script input details
+Oct  4 06:05:41 testing op details
+Oct  4 06:05:41 running op script '/var/tmp/tmp_opNRHMCb/...transferring.file.........JYK6oo/ztpinstall.slax'
+Oct  4 06:05:41 opening op script '/var/tmp/tmp_opNRHMCb/...transferring.file.........JYK6oo/ztpinstall.slax'
+Oct  4 06:05:41 reading op script '/var/tmp/tmp_opNRHMCb/...transferring.file.........JYK6oo/ztpinstall.slax'
+Oct  4 06:05:46 process already running, backing off
+Oct  4 06:05:46 op script output
+Oct  4 06:05:46 begin dump
+<?xml version="1.0"?>
+Oct  4 06:05:46 end dump
+Oct  4 06:05:46 inspecting op output '/var/tmp/tmp_opNRHMCb/...transferring.file.........JYK6oo/ztpinstall.slax'
+Oct  4 06:05:46 finished op script '/var/tmp/tmp_opNRHMCb/...transferring.file.........JYK6oo/ztpinstall.slax'
+Oct  4 06:05:46 op script processing ends
+Oct  4 06:06:42 op script processing begins
+Oct  4 06:06:42 reading op script input details
+Oct  4 06:06:42 testing op details
+Oct  4 06:06:42 running op script '/var/tmp/tmp_opWnVtnO/...transferring.file.........0WQxbB/ztpinstall.slax'
+Oct  4 06:06:42 opening op script '/var/tmp/tmp_opWnVtnO/...transferring.file.........0WQxbB/ztpinstall.slax'
+Oct  4 06:06:42 reading op script '/var/tmp/tmp_opWnVtnO/...transferring.file.........0WQxbB/ztpinstall.slax'
+Oct  4 06:06:49 process already running, backing off
+Oct  4 06:06:49 op script output
+Oct  4 06:06:49 begin dump
+<?xml version="1.0"?>
+Oct  4 06:06:49 end dump
+Oct  4 06:06:49 inspecting op output '/var/tmp/tmp_opWnVtnO/...transferring.file.........0WQxbB/ztpinstall.slax'
+Oct  4 06:06:49 finished op script '/var/tmp/tmp_opWnVtnO/...transferring.file.........0WQxbB/ztpinstall.slax'
+Oct  4 06:06:49 op script processing ends
+Oct  4 06:07:44 op script processing begins
+Oct  4 06:07:44 reading op script input details
+Oct  4 06:07:44 testing op details
+Oct  4 06:07:44 running op script '/var/tmp/tmp_op8uFoN2/...transferring.file.........8L1Pki/ztpinstall.slax'
+Oct  4 06:07:44 opening op script '/var/tmp/tmp_op8uFoN2/...transferring.file.........8L1Pki/ztpinstall.slax'
+Oct  4 06:07:44 reading op script '/var/tmp/tmp_op8uFoN2/...transferring.file.........8L1Pki/ztpinstall.slax'
+Oct  4 06:07:53 process already running, backing off
+Oct  4 06:07:53 op script output
+Oct  4 06:07:53 begin dump
+<?xml version="1.0"?>
+Oct  4 06:07:53 end dump
+Oct  4 06:07:53 inspecting op output '/var/tmp/tmp_op8uFoN2/...transferring.file.........8L1Pki/ztpinstall.slax'
+Oct  4 06:07:53 finished op script '/var/tmp/tmp_op8uFoN2/...transferring.file.........8L1Pki/ztpinstall.slax'
+Oct  4 06:07:53 op script processing ends
+Oct  4 06:08:44 op script processing begins
+Oct  4 06:08:44 reading op script input details
+Oct  4 06:08:44 testing op details
+Oct  4 06:08:44 running op script '/var/tmp/tmp_opq5uyT9/...transferring.file.........noOOTw/ztpinstall.slax'
+Oct  4 06:08:44 opening op script '/var/tmp/tmp_opq5uyT9/...transferring.file.........noOOTw/ztpinstall.slax'
+Oct  4 06:08:44 reading op script '/var/tmp/tmp_opq5uyT9/...transferring.file.........noOOTw/ztpinstall.slax'
+Oct  4 06:08:50 process already running, backing off
+Oct  4 06:08:50 op script output
+Oct  4 06:08:50 begin dump
+<?xml version="1.0"?>
+Oct  4 06:08:50 end dump
+Oct  4 06:08:50 inspecting op output '/var/tmp/tmp_opq5uyT9/...transferring.file.........noOOTw/ztpinstall.slax'
+Oct  4 06:08:50 finished op script '/var/tmp/tmp_opq5uyT9/...transferring.file.........noOOTw/ztpinstall.slax'
+Oct  4 06:08:50 op script processing ends
+Oct  4 06:09:42 op script processing begins
+Oct  4 06:09:42 reading op script input details
+Oct  4 06:09:42 testing op details
+Oct  4 06:09:42 running op script '/var/tmp/tmp_op0lzJVO/...transferring.file.........SHHNXM/ztpinstall.slax'
+Oct  4 06:09:42 opening op script '/var/tmp/tmp_op0lzJVO/...transferring.file.........SHHNXM/ztpinstall.slax'
+Oct  4 06:09:42 reading op script '/var/tmp/tmp_op0lzJVO/...transferring.file.........SHHNXM/ztpinstall.slax'
+Oct  4 06:09:49 process already running, backing off
+Oct  4 06:09:49 op script output
+Oct  4 06:09:49 begin dump
+<?xml version="1.0"?>
+Oct  4 06:09:49 end dump
+Oct  4 06:09:49 inspecting op output '/var/tmp/tmp_op0lzJVO/...transferring.file.........SHHNXM/ztpinstall.slax'
+Oct  4 06:09:49 finished op script '/var/tmp/tmp_op0lzJVO/...transferring.file.........SHHNXM/ztpinstall.slax'
+Oct  4 06:09:49 op script processing ends
+Oct  4 06:10:45 op script processing begins
+Oct  4 06:10:45 reading op script input details
+Oct  4 06:10:45 testing op details
+Oct  4 06:10:45 running op script '/var/tmp/tmp_opfbo5KW/...transferring.file.........RaWxmi/ztpinstall.slax'
+Oct  4 06:10:45 opening op script '/var/tmp/tmp_opfbo5KW/...transferring.file.........RaWxmi/ztpinstall.slax'
+Oct  4 06:10:45 reading op script '/var/tmp/tmp_opfbo5KW/...transferring.file.........RaWxmi/ztpinstall.slax'
+Oct  4 06:10:51 process already running, backing off
+Oct  4 06:10:51 op script output
+Oct  4 06:10:51 begin dump
+<?xml version="1.0"?>
+Oct  4 06:10:51 end dump
+Oct  4 06:10:51 inspecting op output '/var/tmp/tmp_opfbo5KW/...transferring.file.........RaWxmi/ztpinstall.slax'
+Oct  4 06:10:52 finished op script '/var/tmp/tmp_opfbo5KW/...transferring.file.........RaWxmi/ztpinstall.slax'
+Oct  4 06:10:52 op script processing ends
+Oct  4 06:11:42 op script processing begins
+Oct  4 06:11:42 reading op script input details
+Oct  4 06:11:42 testing op details
+Oct  4 06:11:42 running op script '/var/tmp/tmp_oppWhrh9/...transferring.file.........KvO0aX/ztpinstall.slax'
+Oct  4 06:11:42 opening op script '/var/tmp/tmp_oppWhrh9/...transferring.file.........KvO0aX/ztpinstall.slax'
+Oct  4 06:11:42 reading op script '/var/tmp/tmp_oppWhrh9/...transferring.file.........KvO0aX/ztpinstall.slax'
+Oct  4 06:11:48 process already running, backing off
+Oct  4 06:11:48 op script output
+Oct  4 06:11:48 begin dump
+<?xml version="1.0"?>
+Oct  4 06:11:48 end dump
+Oct  4 06:11:48 inspecting op output '/var/tmp/tmp_oppWhrh9/...transferring.file.........KvO0aX/ztpinstall.slax'
+Oct  4 06:11:48 finished op script '/var/tmp/tmp_oppWhrh9/...transferring.file.........KvO0aX/ztpinstall.slax'
+Oct  4 06:11:48 op script processing ends
+Oct  4 06:12:44 op script processing begins
+Oct  4 06:12:44 reading op script input details
+Oct  4 06:12:44 testing op details
+Oct  4 06:12:44 running op script '/var/tmp/tmp_opDhvGdx/...transferring.file.........TXillO/ztpinstall.slax'
+Oct  4 06:12:44 opening op script '/var/tmp/tmp_opDhvGdx/...transferring.file.........TXillO/ztpinstall.slax'
+Oct  4 06:12:44 reading op script '/var/tmp/tmp_opDhvGdx/...transferring.file.........TXillO/ztpinstall.slax'
+Oct  4 06:12:50 process already running, backing off
+Oct  4 06:12:50 op script output
+Oct  4 06:12:50 begin dump
+<?xml version="1.0"?>
+Oct  4 06:12:50 end dump
+Oct  4 06:12:50 inspecting op output '/var/tmp/tmp_opDhvGdx/...transferring.file.........TXillO/ztpinstall.slax'
+Oct  4 06:12:50 finished op script '/var/tmp/tmp_opDhvGdx/...transferring.file.........TXillO/ztpinstall.slax'
+Oct  4 06:12:50 op script processing ends
+Oct  4 06:13:46 op script processing begins
+Oct  4 06:13:46 reading op script input details
+Oct  4 06:13:46 testing op details
+Oct  4 06:13:46 running op script '/var/tmp/tmp_opWYOO7u/...transferring.file.........Smiwp8/ztpinstall.slax'
+Oct  4 06:13:46 opening op script '/var/tmp/tmp_opWYOO7u/...transferring.file.........Smiwp8/ztpinstall.slax'
+Oct  4 06:13:46 reading op script '/var/tmp/tmp_opWYOO7u/...transferring.file.........Smiwp8/ztpinstall.slax'
+Oct  4 06:13:52 process already running, backing off
+Oct  4 06:13:52 op script output
+Oct  4 06:13:52 begin dump
+<?xml version="1.0"?>
+Oct  4 06:13:52 end dump
+Oct  4 06:13:52 inspecting op output '/var/tmp/tmp_opWYOO7u/...transferring.file.........Smiwp8/ztpinstall.slax'
+Oct  4 06:13:52 finished op script '/var/tmp/tmp_opWYOO7u/...transferring.file.........Smiwp8/ztpinstall.slax'
+Oct  4 06:13:52 op script processing ends
+Oct  4 06:14:45 op script processing begins
+Oct  4 06:14:45 reading op script input details
+Oct  4 06:14:45 testing op details
+Oct  4 06:14:45 running op script '/var/tmp/tmp_opYpCizB/...transferring.file.........sPj1cM/ztpinstall.slax'
+Oct  4 06:14:45 opening op script '/var/tmp/tmp_opYpCizB/...transferring.file.........sPj1cM/ztpinstall.slax'
+Oct  4 06:14:45 reading op script '/var/tmp/tmp_opYpCizB/...transferring.file.........sPj1cM/ztpinstall.slax'
+Oct  4 06:14:51 process already running, backing off
+Oct  4 06:14:51 op script output
+Oct  4 06:14:51 begin dump
+<?xml version="1.0"?>
+Oct  4 06:14:51 end dump
+Oct  4 06:14:51 inspecting op output '/var/tmp/tmp_opYpCizB/...transferring.file.........sPj1cM/ztpinstall.slax'
+Oct  4 06:14:51 finished op script '/var/tmp/tmp_opYpCizB/...transferring.file.........sPj1cM/ztpinstall.slax'
+Oct  4 06:14:51 op script processing ends
+                                                                               
+*** FINAL System shutdown message from root@ ***                             
+
+System going down IMMEDIATELY                                                  
+
+                                                                               
+Oct  4 06:15:16 Install error: 
+Oct  4 06:15:16 software installed
+Oct  4 06:15:16 op script output
+Oct  4 06:15:16 begin dump
+<?xml version="1.0"?>
+Oct  4 06:15:16 end dump
+Oct  4 06:15:16 inspecting op output '/var/tmp/tmp_opvFf93w/...transferring.file.........NHuhrh/ztpinstall.slax'
+Oct  4 06:15:16 finished op script '/var/tmp/tmp_opvFf93w/...transferring.file.........NHuhrh/ztpinstall.slax'
+Oct  4 06:15:16 op script processing ends
+OWaiting (max 60 seconds) for system process `vnlru' to stop...done
+Waiting (max 60 seconds) for system process `vnlru_mem' to stop...done
+Waiting (max 60 seconds) for system process `bufdaemon' to stop...done
+Waiting (max 60 seconds) for system process `syncer' to stop...
+Syncing disks, vnodes remaining...1 1 1 1 1 1 1 0 0 0 0 done
+
+syncing disks... All buffers synced.
+Uptime: 18m4s
+unloading fpga driver
+Rebooting...
+
+
+Booting...
+
+Trying Config: CMD:0x40
+Available Memory on Channel0 [2048MB]
+Skipping clock programming - DRAM channels 0 and 2 share a PLL.
+Trying Config: CMD:0x40
+Available Memory on Channel2 [2048MB]
+
+Partition [1,1]
+DRAM MATS Passed
+
+
+U-Boot 1.1.6 (Build time: Jan 25 2012 - 07:53:14)
+
+CPU Frequency = 1200000000Hz
+DRAM:  183 MB
+Flash:  8 MB
+PCIE: [4RCx1] Mode Detected
+USB:   scanning bus for devices... 2 USB Device(s) found
+       scanning bus for storage devices... 1 Storage Device(s) found
+Net:   gmac0, gmac1, gmac2, gmac3, gmac4, gmac5, gmac6, gmac7
+ELF file is 32 bit
+Loading .text @ 0x8f000078 (243004 bytes)
+Loading .rodata @ 0x8f03b5b4 (13912 bytes)
+Loading .rodata.str1.4 @ 0x8f03ec0c (15880 bytes)
+Loading set_Xcommand_set @ 0x8f042a14 (96 bytes)
+Loading .rodata.cst4 @ 0x8f042a74 (16 bytes)
+Loading .data @ 0x8f043000 (5572 bytes)
+Loading .data.rel.ro @ 0x8f0445c4 (120 bytes)
+Loading .data.rel @ 0x8f04463c (136 bytes)
+Clearing .bss @ 0x8f0446c8 (8304 bytes)
+## Starting application at 0x8f000078 ...
+Resetting state for secondary cpus 0xffe....DONE
+Consoles: U-Boot console  
+
+FreeBSD/MIPS U-Boot bootstrap loader, Revision 0.1
+(builder@kessuth.juniper.net, Wed Jan 25 06:08:01 UTC 2012)
+Memory: 183MB
+Loading /boot/defaults/loader.conf 
+/kernel data=0xb64628+0x1198710 syms=[0x4+0xa1b70+0x4+0xf3b27]
+\
+
+Hit [Enter] to boot immediately, or space bar for command prompt.
+Booting [/kernel]...               
+Kernel entry at 0x801000c0 ...
+Sanity Check pass on prom_info @ 0x81d735e8
+init regular console
+GDB: debug ports: sio
+GDB: current port: sio
+KDB: debugger backends: ddb gdb kdm
+KDB: current backend: ddb
+Running in PARTITIONED TLB MODE
+Copyright (c) 1996-2016, Juniper Networks, Inc.
+All rights reserved.
+Copyright (c) 1992-2007 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+        The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+JUNOS 15.1R4.6 #0: 2016-06-23 21:14:31 UTC
+    builder@mayland.juniper.net:/volume/build/junos/15.1/release/15.1R4.6/obj/xlr/junos/bsd/kernels/JUNIPER-QFX/kernel
+WARNING: debug.mpsafenet forced to 0 as ipsec requires Giant
+JUNOS 15.1R4.6 #0: 2016-06-23 21:14:31 UTC
+    builder@mayland.juniper.net:/volume/build/junos/15.1/release/15.1R4.6/obj/xlr/junos/bsd/kernels/JUNIPER-QFX/kernel
+real memory  = 14566330044776458 (10305343585129594880K bytes)
+avail memory = 2781786112 (2652MB)
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+Security policy loaded: JUNOS MAC/pcap (mac_pcap)
+Security policy loaded: JUNOS MAC/runasnonroot (mac_runasnonroot)
+Security policy loaded: Junos MAC/veriexec (mac_veriexec)
+MAC/veriexec fingerprint module loaded: SHA1
+MAC/veriexec fingerprint module loaded: SHA256
+netisr_init: !debug_mpsafenet, forcing maxthreads from 12 to 1
+ETHERNET SOCKET BRIDGE initialising
+fpga driver loaded, 0 (null)
+FXPCI warning: hw.pci.enable_static_config is not set.  
+: RMI's XLR CPU Rev. 0.3 with no FPU implemented
+        L1 Cache: I size 32kb(32 line), D size 32kb(32 line), eight way.
+        L2 Cache: Size 1024kb, eight way
+ 16550A, console
+usb0: EHCI version 1.0
+usb0: USB revision 2.0
+uhub0: 2 ports with 2 removable, self powered
+Timecounter "mips" frequency 1200000000 Hz quality 0
+Timecounter "xlr_pic_timer" frequency 66666666 Hz quality 1
+Loading the NETPFE fc module
+ Loading Redundant LT driver
+Registered AMT tunnel Encap with UDP Tunnel!
+###PCB Group initialized for udppcbgroup
+###PCB Group initialized for tcppcbgroup
+Kernedal0  tahtr euamd as"s-sim0 kdbmu_sk d0b "t a(rpgiedt  740 ) leuxni ted0 
+pdarematurel0:y.
+a<ATP ATP IG eKUSeBrn SSDel  1t1h0r0e>a dF i"xwekdu pDdiareemcotn "A c(cpeisds  7S6C)S Ie-x0i tdeedv ipcree m
+.tduar0e:l y4.0
+ 000MB/s transfers
+da0: 7840MB (16056320 512 byte sectors: 255H 63S/T 999C)
+Trying to mount root from ufs:/dev/da0s2a
+Attaching /packages/jbase via /dev/mdctl...
+Mounted jbase package on /dev/md0...
+
+Verified manifest signed by PackageProductionEc_2016
+Verified jboot signed by PackageProductionEc_2016
+Verified jbase-qfx-15.1R4.6 signed by PackageProductionEc_2016
+Mounted jkernel package on /dev/md2...
+Verified manifest signed by PackageProductionEc_2016
+Verified jkernel-qfx-3-15.1R4.6 signed by PackageProductionEc_2016
+Mounted jpfe package on /dev/md4...
+Verified manifest signed by PackageProductionEc_2016
+Verified jpfe-qfx-3-15.1R4.6 signed by PackageProductionEc_2016
+Mounted jdocs package on /dev/md6...
+Verified manifest signed by PackageProductionEc_2016
+Verified jdocs-qfx-15.1R4.6 signed by PackageProductionEc_2016
+Mounted jroute package on /dev/md8...
+Verified manifest signed by PackageProductionEc_2016
+Verified jroute-qfx-3-15.1R4.6 signed by PackageProductionEc_2016
+Executing /packages/mnt/jroute-qfx-3-15.1R4.6/mount.post..
+Mounted jcrypto package on /dev/md10...
+Verified manifest signed by PackageProductionEc_2016
+Verified jcrypto-qfx-15.1R4.6 signed by PackageProductionEc_2016
+Mounted jswitch package on /dev/md12...
+Verified manifest signed by PackageProductionEc_2016
+Verified jswitch-qfx-3-15.1R4.6 signed by PackageProductionEc_2016
+Mounted py-base-xlr package on /dev/md14...
+Verified manifest signed by PackageProductionEc_2016
+Verified py-base-xlr-15.1R4.6 signed by PackageProductionEc_2016
+swapon: adding /dev/da0s3b as swap device
+Checking sanity of /var/tmp [ /dev/da0s3d ] ... done (full)
+Disabling soft update on /var/tmp [ /dev/da0s3d ] ... done
+Checking sanity of /var [ /dev/da0s2f ] ... done (full)
+Disabling soft update on /var [ /dev/da0s2f ] ... done
+Checking sanity of /config [ /dev/da0s3e ] ... done (full)
+Disabling soft update on /config [ /dev/da0s3e ] ... done
+Checking sanity of /var/shared [ /dev/da0s3f ] ... done (full)
+Disabling soft update on /var/shared [ /dev/da0s3f ] ... done
+Checking sanity of /var/rundb [ /dev/da0s3g ] ... done (full)
+Disabling soft update on /var/rundb [ /dev/da0s3g ] ... done
+Checking sanity of / [ /dev/da0s2a ] ... done (full)
+Disabling soft update on / [ /dev/da0s2a ] ... done
+Automatic reboot in progress...
+df: /var/rundb: No such file or directory
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 128912 free (16 frags, 16112 blocks, 0.0% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 125702 free (22 frags, 15710 blocks, 0.0% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 515306 free (34 frags, 64409 blocks, 0.0% fragmentation)
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 1248974 free (54 frags, 156115 blocks, 0.0% fragmentation)
+sysctl_chassis_role: member mode = Invalid (0)
+sysctl_chassis_role: member mode = Invalid (0)
+mkdir: /mfs/var: No such file or directory
+Creating initial configuration...i2c_dev_access-xlr_i2c_bus_reset: I2C device closed. No more i2c transaction allowed.
+Generating ED25519 key /etc/ssh/ssh_host_ed25519_key
+Generating public/private ed25519 key pair.
+Your identification has been saved in /config/ssh_host_ed25519_key.
+Your public key has been saved in /config/ssh_host_ed25519_key.pub.
+The key fingerprint is:
+96:60:90:28:ce:6e:15:d2:9e:18:de:d9:62:4c:72:b3 root@
+The key's randomart image is:
++--[ED25519  256--+
+|  ....           |
+|.+.*..           |
+|+.@ B o          |
+| = E o . .       |
+|. o .   S        |
+| o     .         |
+|.                |
+|                 |
+|                 |
++-----------------+
+mgd: commit complete
+Setting initial options:  debugger_on_panic=NO debugger_on_break=NO.
+Starting optional daemons:  kdmmachdep.do_minidump: 0 -> 1
+kernel dumps on /dev/da0s3b
+Check for coredumps
+savecore: could not be determined
+savecore: could not be determined
+savecore: no dumps found
+.
+Doing initial network setup:
+.
+Initial interface configuration:
+additional daemons:.
+0
+root: invoke-commands: Executed /tmp/evt_cmd_KNLTop, output to /dev/null in XML format
+Additional routing options:kern.module_path: /boot//kernel;/boot/modules -> /boot/moduleks;/modules/peertlype;/modules/ifpdfe_drv;/modules/lplatform;/moduleos;
+kld netpfe darv: ifpfed_ethd: Unsupported file type
+interface ifpfed_eth.1 already present in the KLD 'kernel'!
+kldload: can't load /modules/ifpfe_drv/ifpfed_eth.kok: lExec format errodr
+ ifpfed_irbload: Unsupported file type
+ ifpfed_ltkldload: Unsupported file type
+ ifpfed_ml_cmnkldload: Unsupported file type
+ ifpfed_ppeerkldload: Unsupported file type
+ ifpfed_svcskldload: Unsupported file type
+ ifpfed_vtkldload: Unsupported file type
+kld platform: dc_ifpfekldload: Unsupported file type
+Loading the DC Platform NETPFE module
+ if_vcpkldload: Unsupported file type
+kld peertype: peertype_fxpckldload: Unsupported file type
+ peertype_hcmkldload: Unsupported file type
+ peertype_sfikldload: Unsupported file type
+ peertype_slaverekldload: Unsupported file type
+ grat_arp_on_ifup=YES: net.link.ether.inet.grat_arp_on_kifup: l1dload: Unsupported file type
+ -> 1
+ ipsec kldkldload: Unsupported file type
+ kats kldkldload: Unsupported file type
+kldload: Unsupported file type
+IPsec: Initialized Security Association Processing.
+.
+Doing additional network setup:.
+Starting final network daemons:.
+kldload: Unsupported file type
+machdep.bootsuccess: 0 -> 1
+Boot media /dev/da0 has dual root support
+** /dev/da0s1a
+FILE SYSTEM CLEAN; SKIPPING CHECKS
+clean, 130546 free (18 frags, 16316 blocks, 0.0% fragmentation)
+sysctl: unknown oid 'hw.re.tvp_mode'
+[: -eq: unexpected operator
+setting ldconfig path: /usr/lib /opt/lib
+starting standard daemons: cron.
+Local package initialization: kdmmachdep.do_minidump: 1 -> 1
+kernel dumps on /dev/da0s3b
+Check for coredumps
+savecore: could not be determined
+savecore: could not be determined
+savecore: no dumps found
+.
+kern.securelevel: -1 -> 1
+starting local daemons:set cores for group access
+.
+Tue Oct  4 06:20:54 UTC 2016
+
+Amnesiac (ttyd0)
+
+login: root
+Password:
+
+--- JUNOS 15.1R4.6 built 2016-06-23 21:14:31 UTC
+clicli
+root@:RE:0% cli
+{master:0}
+root> monitor start op-script.log 
+
+{master:0}
+root> show configuration | no-more 
+## Last commit: 2016-10-04 06:20:20 UTC by root
+version 15.1R4.6;
+/* QFX3500*/
+groups {
+    ztp_script {
+        apply-macro code {
+            version 15.1R4.6;
+            https://42.42.42.30:4443/qfx3500/jinstall-qfx-3-15.1R4.6-domestic-signed.tgz;
+        }
+        apply-macro config {
+            https://42.42.42.30:4443/qfx3500/;
+        }
+    }
+}
+system {
+    root-authentication {
+        encrypted-password "$1$sBoaTOcb$EjWmKTv8l2NZ4hqdLQdrL."; ## SECRET-DATA
+    }
+}
+interfaces {
+    vme {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-qfx3500s;
+                }
+            }
+        }
+    }
+}
+event-options {
+    generate-event {
+        ztp_script time-interval 60;
+    }
+    policy ztp_script {
+        events ztp_script;
+        then {
+            execute-commands {
+                commands {
+                    "op url https://42.42.42.30:4443/qfx3500/ztpinstall.slax";
+                }
+            }
+        }
+    }
+}
+
+{master:0}
+root> 
+*** 'op-script.log' has been created ***
+
+*** op-script.log ***
+Oct  4 06:21:58 op script processing begins
+Oct  4 06:21:58 reading op script input details
+Oct  4 06:21:58 testing op details
+Oct  4 06:21:58 running op script '/var/tmp/tmp_opMofisd/...transferring.file.........Ou6GOK/ztpinstall.slax'
+Oct  4 06:21:58 opening op script '/var/tmp/tmp_opMofisd/...transferring.file.........Ou6GOK/ztpinstall.slax'
+Oct  4 06:21:58 reading op script '/var/tmp/tmp_opMofisd/...transferring.file.........Ou6GOK/ztpinstall.slax'
+Oct  4 06:22:01 SCRIPT-BEGIN
+Oct  4 06:22:01 running_version = 15.1R4.6
+Oct  4 06:22:01 production_version = 15.1R4.6
+Oct  4 06:22:01 Code is up to date, no upgrade required
+Oct  4 06:22:01 Upgrading config
+Oct  4 06:22:02 serial no = P5772-C
+Oct  4 06:22:02 Got config lock
+Oct  4 06:22:02 Processing config url https://42.42.42.30:4443/qfx3500/P5772-C.conf
+Oct  4 06:22:04 ERROR: unable to load config https://42.42.42.30:4443/qfx3500/P5772-C.conf
+Oct  4 06:22:05 release config lock
+Oct  4 06:22:05 op script output
+Oct  4 06:22:05 begin dump
+<?xml version="1.0"?>
+Oct  4 06:22:05 end dump
+Oct  4 06:22:05 inspecting op output '/var/tmp/tmp_opMofisd/...transferring.file.........Ou6GOK/ztpinstall.slax'
+Oct  4 06:22:05 finished op script '/var/tmp/tmp_opMofisd/...transferring.file.........Ou6GOK/ztpinstall.slax'
+Oct  4 06:22:05 op script processing ends
+Oct  4 06:22:57 op script processing begins
+Oct  4 06:22:57 reading op script input details
+Oct  4 06:22:57 testing op details
+Oct  4 06:22:57 running op script '/var/tmp/tmp_opyoe9gm/...transferring.file.........iJWo4w/ztpinstall.slax'
+Oct  4 06:22:57 opening op script '/var/tmp/tmp_opyoe9gm/...transferring.file.........iJWo4w/ztpinstall.slax'
+Oct  4 06:22:57 reading op script '/var/tmp/tmp_opyoe9gm/...transferring.file.........iJWo4w/ztpinstall.slax'
+
+
+{master:0}
+root> Oct  4 06:23:01 SCRIPT-BEGIN
+Oct  4 06:23:01 running_version = 15.1R4.6
+Oct  4 06:23:01 production_version = 15.1R4.6
+Oct  4 06:23:01 Code is up to date, no upgrade required
+Oct  4 06:23:01 Upgrading config
+Oct  4 06:23:01 serial no = P5772
+Oct  4 06:23:01 Got config lock
+Oct  4 06:23:01 Processing config url https://42.42.42.30:4443/qfx3500/P5772.conf
+Oct  4 06:23:04 CONFIG LOAD SUCCESS
+Oct  4 06:23:30 COMMIT SUCCESS
+Oct  4 06:23:31 op script output
+Oct  4 06:23:31 begin dump
+<?xml version="1.0"?>
+Oct  4 06:23:31 end dump
+Oct  4 06:23:31 inspecting op output '/var/tmp/tmp_opyoe9gm/...transferring.file.........iJWo4w/ztpinstall.slax'
+Oct  4 06:23:31 finished op script '/var/tmp/tmp_opyoe9gm/...transferring.file.........iJWo4w/ztpinstall.slax'
+Oct  4 06:23:31 op script processing ends
+
+
+{master:0}
+root@qfx3500-rack7-galadriel> show chassis 
+                                           ^
+syntax error, expecting <command>.
+
+{master:0}
+root@qfx3500-rack7-galadriel> show chassis hardware 
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                P5772             QFX3500
+Pseudo CB 0     
+Routing Engine 0          BUILTIN      BUILTIN           QFX Routing Engine
+FPC 0            REV 17   750-036931   P5772-C           QFX3500-48S4Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x 10G-SFP+
+  PIC 1                   BUILTIN      BUILTIN           4x 40G-QSFP+
+  MGMT BRD       REV 10   750-036946   BBAX9390          QFX3500-MGMT-RJ45-AFI
+Power Supply 0  
+Power Supply 1   Rev 05   740-032091   WA13272           JPSU-650W-AC-AFI
+Fan Tray 0                                               QFX3500 Fan Tray, Front to Back Airflow
+Fan Tray 1                                               QFX3500 Fan Tray, Front to Back Airflow
+Fan Tray 2                                               QFX3500 Fan Tray, Front to Back Airflow
+
+{master:0}
+root@qfx3500-rack7-galadriel> show con
+                                      ^
+'con' is ambiguous.
+Possible completions:
+  configuration        Show current configuration
+  connections          Show circuit cross-connect connections
+root@qfx3500-rack7-galadriel> show configuration 
+## Last commit: 2016-10-04 06:23:28 UTC by root
+version 15.1R4.6;
+system {
+    host-name qfx3500-rack7-galadriel;
+    arp {
+        aging-timer 5;
+    }
+    root-authentication {
+        encrypted-password "$1$sBoaTOcb$EjWmKTv8l2NZ4hqdLQdrL."; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$1$gZ/vEhgp$JPV168Yta4VCR97.V9wG8/"; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        finger;
+        ssh;
+        telnet;                         
+        netconf {
+            ssh;
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+    processes {
+        dhcp-service {
+            traceoptions {
+                file dhcp_logfile size 10m;
+                level all;
+                flag all;
+            }                           
+        }
+    }
+}
+interfaces {
+    xe-0/0/0 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/1 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/2 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }                           
+        }
+    }
+    xe-0/0/3 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/4 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/5 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }                                   
+    xe-0/0/6 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/7 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/8 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/9 {
+        unit 0 {                        
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/10 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/11 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/12 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;  
+            }
+        }
+    }
+    xe-0/0/13 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/14 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/15 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }                               
+    }
+    xe-0/0/16 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/17 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/18 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/19 {                         
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/20 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/21 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/22 {
+        unit 0 {
+            family ethernet-switching { 
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/23 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/24 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/25 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }                           
+        }
+    }
+    xe-0/0/26 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/27 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/28 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }                                   
+    xe-0/0/29 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/30 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/31 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/32 {
+        unit 0 {                        
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/33 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/34 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/35 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;  
+            }
+        }
+    }
+    xe-0/0/36 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/37 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/38 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }                               
+    }
+    xe-0/0/39 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/40 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/41 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/42 {                         
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/43 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/44 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/45 {
+        unit 0 {
+            family ethernet-switching { 
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/46 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    xe-0/0/47 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    et-0/1/0 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }                           
+        }
+    }
+    et-0/1/1 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    et-0/1/2 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }
+    et-0/1/3 {
+        unit 0 {
+            family ethernet-switching {
+                storm-control default;
+            }
+        }
+    }                                   
+    irb {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-qfx3500s;
+                }
+            }
+        }
+    }
+    vme {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-qfx3500s;
+                }
+            }
+        }
+    }
+}
+forwarding-options {
+    storm-control-profiles default {
+        all;
+    }                                   
+}
+protocols {
+    lldp {
+        interface all;
+    }
+    lldp-med {
+        interface all;
+    }
+    igmp-snooping {
+        vlan default;
+    }
+    rstp {
+        interface xe-0/0/0;
+        interface xe-0/0/1;
+        interface xe-0/0/2;
+        interface xe-0/0/3;
+        interface xe-0/0/4;
+        interface xe-0/0/5;
+        interface xe-0/0/6;
+        interface xe-0/0/7;
+        interface xe-0/0/8;
+        interface xe-0/0/9;
+        interface xe-0/0/10;            
+        interface xe-0/0/11;
+        interface xe-0/0/12;
+        interface xe-0/0/13;
+        interface xe-0/0/14;
+        interface xe-0/0/15;
+        interface xe-0/0/16;
+        interface xe-0/0/17;
+        interface xe-0/0/18;
+        interface xe-0/0/19;
+        interface xe-0/0/20;
+        interface xe-0/0/21;
+        interface xe-0/0/22;
+        interface xe-0/0/23;
+        interface xe-0/0/24;
+        interface xe-0/0/25;
+        interface xe-0/0/26;
+        interface xe-0/0/27;
+        interface xe-0/0/28;
+        interface xe-0/0/29;
+        interface xe-0/0/30;
+        interface xe-0/0/31;
+        interface xe-0/0/32;
+        interface xe-0/0/33;            
+        interface xe-0/0/34;
+        interface xe-0/0/35;
+        interface xe-0/0/36;
+        interface xe-0/0/37;
+        interface xe-0/0/38;
+        interface xe-0/0/39;
+        interface xe-0/0/40;
+        interface xe-0/0/41;
+        interface xe-0/0/42;
+        interface xe-0/0/43;
+        interface xe-0/0/44;
+        interface xe-0/0/45;
+        interface xe-0/0/46;
+        interface xe-0/0/47;
+        interface et-0/1/0;
+        interface et-0/1/1;
+        interface et-0/1/2;
+        interface et-0/1/3;
+    }
+}
+vlans {
+    default {
+        vlan-id 1;                      
+        l3-interface irb.0;
+    }
+}
+
+                                                                                                                                                                                                                                                                                                       {master:0}
